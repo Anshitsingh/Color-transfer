@@ -8,23 +8,14 @@ target_WIDTH = 800
 target_HEIGHT = 600
 
 
-target = cv2.imread('C:/Users/user/Desktop/SEM 8/ADIPCV/Assignments/assignment 5/Flowerbed.jpg')
+target = cv2.imread('C:/Users/user/Desktop/SEM 8/ADIPCV/Assignments/assignment 5/Snowball_1.jpg')
 target = imresize(target,(target_HEIGHT,target_WIDTH))
 
 painting=target
-source = cv2.imread('C:/Users/user/Desktop/SEM 8/ADIPCV/Assignments/assignment 5/Painting_flowers.jpg')
+source = cv2.imread('C:/Users/user/Desktop/SEM 8/ADIPCV/Assignments/assignment 5/Painting_Flowers.jpg')
 source = imresize(source,(target_HEIGHT,target_WIDTH))
 height,width,channel = target.shape
 
-def show_images(source,target,tranformedImage):
-    
-    draw_image("Source", source)
-    draw_image("Target", target)
-    draw_image("Output", tranformedImage)
-    
-    cv2.imwrite("C:/Users/user/Desktop/SEM 8/ADIPCV/Assignments/assignment 5/Pai",tranformedImage)
-    cv2.waitKey(0) 
-    cv2.destroyAllWindows()
 
 
 
@@ -97,4 +88,4 @@ for i in range(0,height):
             target[i,j,k] = t
 target = lab2RGB(target)
 
-cv2.imwrite('C:/Users/user/Desktop/SEM 8/ADIPCV/Assignments/assignment 5/out1.jpg',target)
+cv2.imwrite('C:/Users/user/Desktop/SEM 8/ADIPCV/Assignments/assignment 5/Painting_flowerstoSnowball_1.jpg',target)
